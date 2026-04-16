@@ -29,7 +29,6 @@ Main entry points:
 - `Chapter3/code/reconfigration/src/model/collect_table5_metrics.py`
 - `Chapter3/code/reconfigration/src/model/run_table5_batch.sh`
 
-See [Chapter3/README.md](/Users/masudasatoki/Desktop/D論コードまとめ/English/Chapter3/README.md) for the full Chapter 3 structure.
 
 ## Chapter 5
 
@@ -45,12 +44,3 @@ Main entry points:
 - `Chapter5/main.py`
 - `Chapter5/counterfactual.py`
 - `Chapter5/demand_estimation.py`
-
-See [Chapter5/README.md](/Users/masudasatoki/Desktop/D論コードまとめ/English/Chapter5/README.md) for details.
-
-## Notes For Public Release
-
-- `Chapter5/data/raw/` still contains original source datasets. Redistribution permissions should be checked before publication.
-- Many outputs have already been removed or are intended to be regenerated locally.
-- `Chapter5/notebook/` is a supporting analysis notebook and does not perfectly match the streamlined main code path.
-- `Chapter3/` contains many generated artifacts under `output/` and SUMO-related directories; those are generally better treated as reproducible outputs than as core source files.
