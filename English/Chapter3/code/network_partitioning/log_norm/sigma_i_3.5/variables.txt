@@ -1,0 +1,6 @@
+network_path: ../sumo/network/data/output.geojson
+flow_path: ../sumo/output/random_DUE_veh14295_end7200_period0.5/edge/
+range_start: 10
+range_end: 30
+sigma_i: 3.5
+sigma_x: 1

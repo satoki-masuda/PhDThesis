@@ -1,0 +1,43 @@
+ray:
+  num_cpus: 47 #47
+  include_dashboard: False
+
+model:
+  start_year: 2009 # 転居モデルは2015年以降，
+  end_year: 2023
+  ref_year: 1
+  dev_zone: 19_zone
+  res_zone: pop_zone
+  move_ratio: 0.042833
+  n_forward: 100 #100 # 1000
+  n_perturb: 50 #50 # 200
+  seed: 42
+  horizon: 15 # 10
+  discount_factor: 0.99
+  num_features_gov: 4
+  num_features_dev: 4
+  n_bootstrap: 25 # 100
+  bootstrap: True
+
+scaling:
+  population_density: 1e3
+  population: 1e4
+  los: 1e2
+  development_res: 1e4
+  development_shop: 1e4
+  price: 1e5
+  land_demand: 1e3
+
+counter_factual:
+  sim_start_year: 2010
+  target_zone: 1
+  theta_gov: [1.0, 0.49498091, 0.26041209, -0.27498506]
+  theta_dev: [1.0, 6.91530983, -0.64256125, 19.98879662]
+
+land_price_adjustment:
+  new_house_ratio: 0.616 # 転入者のうち新築持ち家の割合
+  per_person_land_demand: 13.414 #1人あたり平均敷地面積[m2] 分譲マンションと戸建ての加重平均
+  adjust_price_unit: 1000 # 土地価格調整の単位価格（x円/m2ごとに土地価格を調整）
+  adjust_margin: 500 # 収束性のためのマージン（収束計算中にxm2未満の需給の差異は無視）
+  change_limit: 0.02 # 土地価格の変化率の上限（±x*100 %以内に抑える）
+  max_iteration: 100 # 土地価格調整の最大繰り返し回数
